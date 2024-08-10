@@ -1,0 +1,9 @@
+env:
+  - variable: ENV
+    value: "dev"
+  - variable: FREEE_CLIENT_ID
+    value: freeeClientId
+  - variable: FREEE_CLIENT_SECRET
+    value: freeeClientSecret
+  - variable: AUTH_SECRET
+    value: authSecret
