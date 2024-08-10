@@ -14,6 +14,7 @@ type User = {
 
 export const { handlers, signIn } = NextAuth({
   secret: process.env.AUTH_SECRET,
+  trustHost: true,
   providers: [
     {
       id: 'freee',
