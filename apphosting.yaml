@@ -1,6 +1,8 @@
 env:
   - variable: ENV
     value: "dev"
+  - variable: AUTH_URL
+    value: "https://freee-nextjs--freee-repeatedly-deal-dev.us-central1.hosted.app"
   - variable: FREEE_CLIENT_ID
     secret: freeeClientId
   - variable: FREEE_CLIENT_SECRET
