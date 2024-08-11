@@ -31,6 +31,18 @@ export const { handlers, signIn } = NextAuth({
       userinfo: 'https://api.freee.co.jp/api/1/users/me?companies=true',
     },
   ],
+  // https://github.com/nextauthjs/next-auth/discussions/6898#discussioncomment-5308820
+  cookies: {
+    pkceCodeVerifier: {
+      name: "next-auth.pkce.code_verifier",
+      options: {
+        httpOnly: true,
+        sameSite: "none",
+        path: "/",
+        secure: true,
+      },
+    },
+  },
   callbacks: {
     async jwt({ token, account, profile }) {
       if (account != null) {
