@@ -6,7 +6,9 @@
     "dev": "dotenvx run -f .env -- next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "fix": "npm run lint && npm run format",
+    "lint": "npx @biomejs/biome lint --write ./src",
+    "format": "npx @biomejs/biome format --write ./src"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -16,6 +18,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@dotenvx/dotenvx": "^1.6.4",
     "@types/node": "^20",
     "@types/react": "^18",
